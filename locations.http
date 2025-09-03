@@ -1,0 +1,19 @@
+GET http://localhost:8080/api/locations
+
+### Create location
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+
+{
+  "name": "Balaton",
+  "coords": "46.0,18.0"
+}
+
+### Create location with empty name
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+
+{
+  "name": "",
+  "coords": "46.0,18.0"
+}
