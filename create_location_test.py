@@ -15,10 +15,10 @@ def page():
 
 
 def test_create_location(page):
-    page.create_location("Balaton", "47.4979,19.0402")
+    page.create_location()
     page.assert_message_is("Location has been created")
 
 
 def test_create_location_with_empty_name(page):
-    page.create_location("", "47.4979,19.0402")
+    page.create_location("")
     page.name_validation_message_is("Can not be empty name!")

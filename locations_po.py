@@ -13,7 +13,7 @@ class LocationsPage:
     def go(self):
         self.driver.get("http://localhost:8080")
 
-    def create_location(self, name, coords):
+    def create_location(self, name="Balaton", coords="46.0,18.0"):
         self.driver.find_element(By.ID, "create-location-link").click()
         self.driver.find_element(By.ID, "location-name").send_keys(name)
         self.driver.find_element(By.ID, "location-coords").send_keys(coords)
