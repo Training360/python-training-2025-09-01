@@ -33,3 +33,12 @@ class LocationsPage:
             lambda _: self.driver.find_element(By.ID, "location-name-feedback").text
             == message
         )
+
+    def name_in_first_row_is(self, name: str) -> None:
+        wait = WebDriverWait(self.driver, 3)
+        wait.until(
+            lambda _: self.driver.find_element(
+                By.CSS_SELECTOR, "#locations-table-tbody > tr > td:nth-child(2)"
+            ).text
+            == name
+        )
